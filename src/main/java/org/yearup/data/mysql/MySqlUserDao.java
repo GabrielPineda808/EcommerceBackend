@@ -102,9 +102,8 @@ public class MySqlUserDao extends MySqlDaoBase implements UserDao
     public User getByUserName(String username)
     {
         String sql = "SELECT * " +
-                " FROM users " +
-                " WHERE username = ?";
-
+                "FROM users " +
+                "WHERE username = ?";
         try (Connection connection = getConnection())
         {
             PreparedStatement statement = connection.prepareStatement(sql);
